@@ -22,7 +22,7 @@ if (empty($_POST["reviewsMessage"])) {
  
 $reviewsEmail = $_POST["reviewsEmail"];
  
-$reviewsEmailTo = "cpa.lid@yandex.ru";
+$reviewsEmailTo = "ichiro_san@mail.ru";
 $reviewsSubject = "Новый отзыв на сайте ПитерИпотека!";
  
 

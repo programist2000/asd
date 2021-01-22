@@ -22,7 +22,7 @@ if (empty($_POST["message"])) {
  
 $email = $_POST["email"];
  
-$EmailTo = "cpa.lid@yandex.ru";
+$EmailTo = "ichiro_san@mail.ru";
 $Subject = "Новая заявка на сайте ПитерИпотека!";
  
 
