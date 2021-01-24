@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>inky</title>
+
+	<link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" type="text/css" href="css/slick.css">
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+  
+
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+
+  <style type="text/css">
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .slider {
+        width: 50%;
+        margin: 40px auto;
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+
+    .slick-active {
+      opacity: .5;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+  </style>
+
+	<link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="//api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU"></script>
+	<script src="js/maskedinput.js"></script>
+</head>
+<body>
+
+
+	<header>
+		<div class="wrapper">
+			<div class="logo">
+				<a href="#">
+					<img src="img/logo.png" alt="">
+				</a>
+			</div>
+			<div class="info">
+				<span class="info-text">
+					+7 (3952) 98 - 78 - 13
+				</span><br>
+				<span class="info-text">
+					inky38@mail.ru
+				</span>
+			</div>
+			<div class="container">
+			<div class="menu">
+				<ul>
+					<a href="#calc">
+						<li>Калькулятор</li>
+					</a>
+					<a href="#services">
+						<li>Наши услуги</li>
+					</a>
+					<a href="#works">
+						<li>Примеры работ</li>
+					</a>
+					<a href="#benefits">
+						<li>Наши выгоды</li>
+					</a>
+					<a href="#ourPrice">
+						<li>Цены</li>
+					</a>
+					<a href="#map">
+						<li>Контакты</li>
+					</a>	
+				</ul>
+			</div>
+
+			<div class="main-page">
+				<span class="main-info">
+					Дизайн, изготовление и монтаж наружной и интерьерной рекламы
+				</span><br>
+				<span class="main-small-info">
+					Широкоформатная печать от 90 руб кв.м<br>
+					Интерьерная печать от 500 руб кв.м<br>
+					Брендирование - от 900 руб кв.м<br>
+					Качество печати - от 360-1440 dpi
+				</span>
+
+				<a id="go"><button class="calc-but-class" id="main-btn">Заказать расчёт</button></a>
+			</div>
+
+			</div>
+
+		</div>
+	</header>
+
+
+<section class="services" id="services">
+	<div class="container">
+		<ul class="serv_ul">
+			<li>
+				<img src="img/marker-1.png" alt="" class="serv_img">
+				<div class="serv_head">
+					Широкоформатная печать
+				</div>
+				<ul class="serv_list">
+					<li>Печать баннеров</li>
+					<li>Печать плакатов, афиш</li>
+					<li>Перфорированная пленка</li>
+					<li>Печать постеров, roll up и пр.</li>
+				</ul>
+				<a id="go"><button class="serv-but-class" id="serv-but-id">Рассчитать стоимость</button></a>
+			</li>
+			<li>
+				<img src="img/marker-2.png" alt="" class="serv_img">
+				<div class="serv_head">
+					Интерьерная печать
+				</div>
+				<ul class="serv_list">
+					<li>Изготовление информационных табличек и указателей</li>
+					<li>Интерьерная печать</li>
+					<li>Самоклеющуюся пленка</li>
+					<li>Перфорированная пленка</li>
+					<li>Холст</li>
+					<li>Фотообои</li>
+					<li>Напольная полноцветная графика</li>
+				</ul>
+				<a id="go"><button class="serv-but-class" id="serv-but-id">Рассчитать стоимость</button></a>
+			</li>
+			<li>
+				<img src="img/marker-3.png" alt="" class="serv_img">
+				<div class="serv_head">
+					Услуги монтажа
+				</div>
+				<ul class="serv_list">
+					<li>Монтаж баннеров</li>
+					<li>Монтаж вывесок</li>
+					<li>Накатка пленки</li>
+					<li>Замеры</li>
+					<li>Консультация по монтажу</li>
+				</ul>
+				<a id="go"><button class="serv-but-class" id="serv-but-id">Рассчитать стоимость</button></a>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<section class="works" id="works">
+	<div class="container">
+		<h2>Наши работы</h2>
+	</div>
+	<section class="lazy slider" data-sizes="50vw" data-slick='{"autoplay": true}'>
+    <div>
+      <img src="img/works-2.png" data-sizes="100vw">
+    </div>
+    <div>
+      <img src="img/works-2.png" data-sizes="100vw">
+    </div>
+    <div>
+      <img src="img/works-2.png" data-sizes="100vw">
+    </div>
+  </section>
+
+
+</section>
+
+<section class="calculator" id="calc">
+	<div class="container">
+		<h2>Калькулятор расчёта стоимости</h2>
+		<div class="calc-form box-filter">
+			
+			<div class="calc-block-1">
+				<div class="service">
+					<span class="service-choice">
+					Выберите услугу	
+					</span>
+					<select name="service" id="service" onchange="func()">
+						<option value="90" selected="selected">Баннерная ткань Китай</option>
+						<option value="130">Баннерная ткань Корея</option>
+						<option value="190">Баннерная ткань Германия</option>
+						<option value="225">Сетка баннерная</option>
+						<option value="250">Пленка 360 dpi</option>
+						<option value="450">Первфорированная пленка</option>
+						<option value="500">Интерьерная печать на пленке</option>
+						<option value="600">Перфорированная пленка</option>
+						<option value="250">Постерная бумага</option>
+					</select>
+
+					<span class="service-choice">
+					Размеры изделия (см)
+					<input class="inp" type="text" id="size1"	name="size1" placeholder="Ширина">
+					<input class="inp" type="text" id="size2" name="size2" placeholder="Длина">
+					</span>
+				</div>
+			</div>
+
+			<div class="calc-block-2">
+				<div class="numbers">
+				<div class="price-1">
+					<span class="price-1-1">
+						Итоговый размер
+						<span class="size" id="size"></span>
+					</span>
+					<span class="price-1-2">
+						Стоимость за м&sup2;
+						<span class="price" id="price"></span>
+					</span>
+				</div>
+				
+				<div class="price-2">
+					<span class="price-2-1">
+						Итоговая стоимость
+						<span class="fullprice" id="fullprice"></span>
+					</span>
+				</div>
+
+				<div class="pluses">
+					<span id="pricefull"></span>
+				</div>
+
+				</div>
+			</div>
+
+		</div>
+		<div class="calc-text">
+			Окончательную стоимость уточняйте у менеджера.<br> Закажите бесплатный расчёт сметы сейчас +7 (3952) 98 - 78 - 13
+		</div>
+		<a id="go"><button class="calc-but-class" id="serv-but-id">Рассчитать стоимость</button></a>
+	</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section class="benefits" id="benefits">
+		<div class="container">
+		<h2>Почему клиенты нам доверяют</h2>
+		<div class="benefits-list">
+			<ul class="ben-list">
+				<li>
+					<img class="ben-img" src="img/ben-1.png" alt="">
+					<span class="ben-title">
+						гарантия качества
+					</span><br>
+					<span class="ben-text">
+						Гарантируем вам качество печати от 360-1440 dpi благодаря использованию современного оборудования
+					</span>
+				</li>
+				<li>
+					<img class="ben-img" src="img/ben-2.png" alt="">
+					<span class="ben-title">
+						Выгодная цена
+					</span><br>
+					<span class="ben-text">
+						Мы заинтересованы в долгосрочном сотрудничестве с Вами, а потому предлагаем самые выгодные цены на рынке
+					</span>
+				</li>
+				<li>
+					<img class="ben-img" src="img/ben-3.png" alt="">
+					<span class="ben-title">
+						Гарантия сроков 
+					</span><br>
+					<span class="ben-text">
+						С нами Вы экономите время! Оперативность всех этапов работ позволяет нам изготавливать заказы в сроки от 1 до 2 дней
+					</span>
+				</li>
+				<li>
+					<img class="ben-img" src="img/ben-4.png" alt="">
+					<span class="ben-title">
+						Проект "под ключ"
+					</span><br>
+					<span class="ben-text">
+						Предлагаем комплексное решение вашей задачи. Бесплатно рассчитаем смету всех работ и осуществим Ваш проект - от дизайна до полного монтажа
+					</span>
+				</li>
+				<li>
+					<img class="ben-img" src="img/ben-5.png" alt="">
+					<span class="ben-title">
+						Решение вашей конкретной задачи
+					</span><br>
+					<span class="ben-text">
+						С нами вы экономите силы! Осуществляем подбор индивидуального решения для выполнения Вашей конкретной задачи (выбор типа продукции, материалов и пр.)
+					</span>
+				</li>
+				<li>
+					<img class="ben-img" src="img/ben-6.png" alt="">
+					<span class="ben-title">
+						Гарантия прозрачной схемы работы
+					</span><br>
+					<span class="ben-text">
+						Работаем с Вами без наценок и скрытых платежей
+					</span>
+				</li>
+			</ul>
+		</div>
+
+		<div class="benefits-img">
+			<div class="benefits-text">
+
+				<div class="benefits-div">
+					
+					<span class="span-1">
+						У вас есть видение того, как должен выглядеть проект,
+					</span><br>
+					<span class="span-2">
+						но вы не знаете, как воплотить его в жизнь?
+					</span><br>
+					<span class="span-3">
+						Мы с радостью проконсультируем Вас, поможем рассчитать стоимость и реализуем проект!
+					</span>
+
+					<a id="go"><button class="calc-but-class" id="ben">Рассчитать стоимость</button></a>
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+</section>
+
+
+
+
+
+<section class="ourPrice" id="ourPrice">
+	<div class="container">
+		<h2 class="h2-center">Наши цены</h2>
+		<table class="tabl">
+		<caption class="tabl-title">Широкоформатная печать, цена 1 м2., (720 dpi - 1440 dpi)</caption>
+  			<tr>
+    			<td>Баннерная ткань Китай</td>
+    			<td>от 90 руб/м2 - 300 гр.</td>
+  			</tr>
+  			<tr>
+    			<td>Баннерная ткань Корея</td>
+    			<td>от 130 руб/м2 - 440 гр.</td>
+  			</tr>
+  			<tr>
+    			<td>Баннерная ткань Германия</td>
+    			<td>от 190 руб/м2 - 510 гр.</td>
+  			</tr>
+  			<tr>
+    			<td>Сетка баннерная</td>
+    			<td>от 225 руб/м2</td>
+  			</tr>
+  			<tr>
+    			<td>Пленка 360 dpi</td>
+    			<td>250 руб/м2</td>
+  			</tr>
+  			<tr>
+    			<td>Первфорированная пленка</td>
+    			<td>450 руб/м2</td>
+  			</tr>
+	</table>
+
+	<table class="tabl">
+		<caption class="tabl-title">Интерьерная печать, цена за 1 м2., (720 dpi - 1440 dpi)</caption>
+  			<tr>
+    			<td>Интерьерная печать на пленке</td>
+    			<td>1440 dpi - 500 руб/м2</td>
+  			</tr>
+  			<tr>
+    			<td>Перфорированная пленка</td>
+    			<td>600 руб/м2</td>
+  			</tr>
+  			<tr>
+    			<td>Постерная бумага</td>
+    			<td>250 руб/м2</td>
+  			</tr>
+	</table>
+
+
+
+<table class="tabl">
+		<caption class="tabl-title">Дополнительные услуги</caption>
+  			<tr>
+    			<td>Усиление</td>
+    			<td>90 руб/м2</td>
+  			</tr>
+  			<tr>
+    			<td>Проклейка</td>
+    			<td>90 руб/м2</td>
+  			</tr>
+  			<tr>
+    			<td>Ветровые карманы</td>
+    			<td>25 руб/шт.</td>
+  			</tr>
+  			<tr>
+    			<td>Люверсы 12 мм</td>
+    			<td>12 руб/шт.</td>
+  			</tr>
+  			<tr>
+    			<td>Монтаж</td>
+    			<td>120 руб/м2</td>
+  			</tr>
+  			<tr>
+    			<td>Демонтаж</td>
+    			<td>100 руб/м2</td>
+  			</tr>
+  			<tr>
+    			<td>Разработка макета</td>
+    			<td>от 300 руб</td>
+  			</tr>
+	</table>
+
+
+<span class="text text-1">
+	*Цены на сайте носят информативный характер и могут меняться в зависимости от условий заказа.
+</span><br>
+<span class="text">
+	Уточняйте окончательную цену по телефону <span class="text-inside">+7 (3952) 98 - 78 - 13</span>
+</span><br>
+<span class="text">
+	Или закажите обратный звонок, мы с Вами свяжемся и ответим на все вопросы
+</span>
+
+	</div>
+</section>
+
+
+
+
+
+<section class="scheme">
+	<div class="container">
+		<div class="scheme-block">
+		<h2>Схема работы</h2>
+
+		<div class="scheme-img">
+			<img src="img/scheme.png" alt="">
+		</div>
+
+		<div class="scheme-list">
+			<ul class="scheme-ul">
+				<li>
+					<div class="scheme-icon">
+					<span class="scheme-number">1</span>
+					</div>
+					<span class="sceme-text">
+						Оставляете заявку или звоните по телефону <span class="bold">+7 (3952) 98 - 78 - 13</span>
+					</span>
+				</li>
+				<li>
+					<div class="scheme-icon">
+					<span class="scheme-number">2</span>
+					</div>
+					<span class="sceme-text">
+						Обсуждаем детали и производим расчет стоимости вашего заказа
+					</span>
+				</li>
+				<li>
+					<div class="scheme-icon">
+					<span class="scheme-number">3</span>
+					</div>
+					<span class="sceme-text">
+						Заключаем договор и приступаем к изготовлению заказа
+					</span>
+				</li>
+				<li>
+					<div class="scheme-icon">
+					<span class="scheme-number">4</span>
+					</div>
+					<span class="sceme-text">
+						Производите оплату (юр. лица - до, физ. лица - после выполнения)
+					</span>
+				</li>
+				<li>
+					<div class="scheme-icon">
+					<span class="scheme-number">5</span>
+					</div>
+					<span class="sceme-text">
+						Доставляем продукцию точно в срок
+					</span>
+				</li>
+				<li>
+					<div class="scheme-icon">
+					<span class="scheme-number">6</span>
+					</div>
+					<span class="sceme-text">
+						<span class="bold">ВЫ ПОЛУЧИТЕ КАЧЕСТВЕННУЮ ПРОДУКЦИЮ ПО РАЗУМНОЙ ЦЕНЕ!</span>
+					</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+</section>
+
+
+<section class="promo">
+	<h2>Мы изготавливали рекламу для</h2>
+	 <section class="regular slider" data-slick='{"autoplay": true}'>
+    <div>
+      <img src="img/promo-1.png">
+    </div>
+    <div>
+      <img src="img/promo-2.png">
+    </div>
+    <div>
+      <img src="img/promo-3.png">
+    </div>
+    <div>
+      <img src="img/promo-2.png">
+    </div>
+    <div>
+      <img src="img/promo-3.png">
+    </div>
+    <div>
+      <img src="img/promo-1.png">
+    </div>
+  </section>
+
+</section>
+
+
+<section class="form">
+	<div class="container">
+		<div class="contact-form">
+			<span class="form-1">
+				Оставьте заявку
+			</span>
+			<span class="form-2">
+				на рачет стоимости наружной рекламы
+			</span>
+			<form action="send.php" class="form-action" onsubmit="return (ValidMail()&&ValidPhone())" method="POST">
+				
+				<input name="name" type="text" required class="form-name" maxlength="18" placeholder="Ваше имя*" />
+                <input id="form-phone" name="phone" type="tel" required minlength="8" maxlength="18" class="form-tell" placeholder="Ваш телефон*" />
+                <input name="email" type="email" class="form-email" maxlength="30" placeholder="Ваш e-mail (не обязательно)" />
+                <button type="submit" class="form-button">Рассчитать стоимость</button>
+
+			</form>
+		</div>
+	</div>
+</section>
+
+<section class="map" id="map">
+<div class="container">
+	<h2 class="map-h2">Мы на карте</h2>
+	<span class="city">г. Иркутск, ул. Безбокова, д. 7/4</span>
+</div>
+	<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A4aaa69a38e22e26680d35a5f1fa08827f5284621d47a686982f360682ce1b052&amp;source=constructor" width="100%" height="500" frameborder="0"></iframe></iframe>
+</section>
+
+<footer>
+	<div class="container">
+		<div class="block-first">
+			<span class="ognip">
+				ОГНИП - 317385000092000 <br>
+				ИНН - 381113684994
+			</span><br>
+			<span class="conf">
+				<a class="conf-link" href="">Политика конфиденциальности</a>
+			</span>
+		</div>
+		<div class="block-second">
+			<img src="img/logo.png" alt="">
+		</div>
+		<div class="block-third">
+			<span class="answer">
+				Возникли вопросы? Звоните! <br>
+				<span class="float">+7 (3952) 98 - 78 - 13</span> <br>
+				<span class="float"><a href="#" id="go">
+					Заказать звонок
+				</a></span>
+			</span><br>
+			<span class="footer-mail">
+				inky38@mail.ru
+			</span>
+		</div>
+	</div>
+</footer>
+
+</body>
+  <script src="js/slick.min.js" type="text/javascript" charset="utf-8"></script>
+  	<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+
+ 
+  var input1 = document.getElementById('size1');
+  var input2 = document.getElementById('size2');
+
+
+  input1.oninput = function() {
+  document.getElementById('size').innerHTML = input1.value*input2.value/10000 + " м&sup2;";
+
+
+document.getElementById('fullprice').innerHTML = input1.value*input2.value*value/100 + " рублей";
+
+var sumPrice = input1.value*input2.value*value/10000;
+
+
+
+if (sumPrice>100) {
+	document.getElementById('pricefull').innerHTML = "- резка на формат бесплатно"
+}
+
+if (sumPrice>1000) {
+	document.getElementById('pricefull').innerHTML = "- резка на формат бесплатно" + '<br>' + "- упаковка бесплатно"
+}
+
+if (sumPrice>1500) {
+	document.getElementById('pricefull').innerHTML = "- резка на формат бесплатно" + '<br>' + "- упаковка бесплатно" + '<br>' + "- доставка бесплатно"
+}
+
+if (sumPrice>2000) {
+	document.getElementById('pricefull').innerHTML = "- резка на формат бесплатно" + '<br>' + "- упаковка бесплатно" + '<br>' + "- доставка бесплатно" + '<br>' + "- образцы и цветопроба бесплатно"
+}
+
+  };
+
+  input2.oninput = function() {
+  document.getElementById('size').innerHTML = input1.value*input2.value/10000 + " м&sup2;";
+
+document.getElementById('fullprice').innerHTML = input2.value*input1.value*value/10000 + " рублей";
+
+
+var sumPrice = input1.value*input2.value*value/10000;
+
+if (sumPrice>100) {
+	document.getElementById('pricefull').innerHTML = "- резка на формат бесплатно"
+}
+
+if (sumPrice>1000) {
+	document.getElementById('pricefull').innerHTML = "- резка на формат бесплатно" + '<br>' + "- упаковка бесплатно"
+}
+
+if (sumPrice>1500) {
+	document.getElementById('pricefull').innerHTML = "- резка на формат бесплатно" + '<br>' + "- упаковка бесплатно" + '<br>' + "- доставка бесплатно"
+}
+
+if (sumPrice>2000) {
+	document.getElementById('pricefull').innerHTML = "- резка на формат бесплатно" + '<br>' + "- упаковка бесплатно" + '<br>' + "- доставка бесплатно" + '<br>' + "- образцы и цветопроба бесплатно"
+}
+
+  };
+
+
+function func() {
+
+	select = document.getElementById("service"); // Выбираем  select по id
+    value = select.options[select.selectedIndex].value; // Значение value для выбранного option
+    document.getElementById('price').innerHTML = value + " рублей";
+
+    document.getElementById('fullprice').innerHTML = input1.value*value*input2.value/10000 + " рублей";
+
+var sumPrice = input1.value*input2.value*value/10000;
+
+
+    if (sumPrice>100) {
+	document.getElementById('pricefull').innerHTML = "- резка на формат бесплатно"
+}
+
+if (sumPrice>1000) {
+	document.getElementById('pricefull').innerHTML = "- резка на формат бесплатно" + '<br>' + "- упаковка бесплатно"
+}
+
+if (sumPrice>1500) {
+	document.getElementById('pricefull').innerHTML = "- резка на формат бесплатно" + '<br>' + "- упаковка бесплатно" + '<br>' + "- доставка бесплатно"
+}
+
+if (sumPrice>2000) {
+	document.getElementById('pricefull').innerHTML = "- резка на формат бесплатно" + '<br>' + "- упаковка бесплатно" + '<br>' + "- доставка бесплатно" + '<br>' + "- образцы и цветопроба бесплатно"
+}
+}
+
+
+
+
+ 
+function ValidMail() {
+    var re = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
+    var myMail = document.getElementById('form-email').value;
+    var valid = re.test(myMail);
+    if (valid) output = 'Адрес эл. почты введен правильно!';
+    else output = 'Адрес электронной почты введен неправильно!';
+    document.getElementById('message').innerHTML = output;
+    return valid;
+}
+
+
+
+ 
+$(document).ready(function() { // вся мaгия пoсле зaгрузки стрaницы
+	$('a#go').click( function(event){ // лoвим клик пo ссылки с id="go"
+		event.preventDefault(); // выключaем стaндaртную рoль элементa
+		$('#overlay').fadeIn(400, // снaчaлa плaвнo пoкaзывaем темную пoдлoжку
+		 	function(){ // пoсле выпoлнения предъидущей aнимaции
+				$('#modal-contact-form') 
+					.css('display', 'block') // убирaем у мoдaльнoгo oкнa display: none;
+					.animate({opacity: 1, top: '50%'}, 200); // плaвнo прибaвляем прoзрaчнoсть oднoвременнo сo съезжaнием вниз
+		});
+	});
+	/* Зaкрытие мoдaльнoгo oкнa, тут делaем тo же сaмoе нo в oбрaтнoм пoрядке */
+	$('#modal_close, #overlay').click( function(){ // лoвим клик пo крестику или пoдлoжке
+		$('#modal-contact-form')
+			.animate({opacity: 0, top: '45%'}, 200,  // плaвнo меняем прoзрaчнoсть нa 0 и oднoвременнo двигaем oкнo вверх
+				function(){ // пoсле aнимaции
+					$(this).css('display', 'none'); // делaем ему display: none;
+					$('#overlay').fadeOut(400); // скрывaем пoдлoжку
+				}
+			);
+	});
+});
+
+jQuery(function($){
+   $("#form-phone").mask("+7 (999) 999-9999");
+   });
+
+jQuery(function($){
+   $("#form-phone-modal").mask("+7 (999) 999-9999");
+   });
+
+$(document).ready(function(){
+$('a[href*=#]').bind("click", function(e){
+var anchor = $(this);
+$('html, body').stop().animate({
+scrollTop: $(anchor.attr('href')).offset().top
+}, 1000);
+e.preventDefault();
+});
+return false;
+});
+
+ $(document).on('ready', function() {
+      $(".vertical-center-4").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+        slidesToShow: 4,
+        slidesToScroll: 2
+      });
+      $(".vertical-center-3").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+      $(".vertical-center-2").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+        slidesToShow: 2,
+        slidesToScroll: 2
+      });
+      $(".vertical-center").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+      });
+      $(".vertical").slick({
+        dots: true,
+        vertical: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+      $(".regular").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+      $(".center").slick({
+        dots: true,
+        infinite: true,
+        centerMode: true,
+        slidesToShow: 5,
+        slidesToScroll: 3
+      });
+      $(".variable").slick({
+        dots: true,
+        infinite: true,
+        variableWidth: true
+      });
+      $(".lazy").slick({
+        lazyLoad: 'ondemand', // ondemand progressive anticipated
+        infinite: true
+      });
+    });
+
+
+
+ $(document).ready(function(){
+			
+			$('.hidden_field').parent().hide();
+			
+			$('#get_result').click(function(){
+				
+				var sure_field_count = 0;
+
+				$('.sure_field').each(function(){		
+					if( $(this).val() == '' ) sure_field_count++;			
+				});
+
+				if( sure_field_count == 0 ){
+					eval(" result_proc =parseFloat($('#id_1 input').val())*parseFloat($('#id_2 input').val())");
+					$('#view_result').html(result_proc.toFixed(1));	
+				}				
+				else $('#view_result').html('Не заполнены обязательные поля!');
+			});
+
+		});
+
+
+</script>
+
+
+
+      <div class="contact-form" id="modal-contact-form">
+      <span id="modal_close">X</span>
+			<span class="form-1">
+				Оставьте заявку
+			</span>
+			<span class="form-2">
+				на рачет стоимости наружной рекламы
+			</span>
+			<form action="send.php" class="form-action" onsubmit="return (ValidMail())" method="POST">
+				
+				<input name="name" type="text" required class="form-name" maxlength="18" placeholder="Ваше имя*" />
+                <input id="form-phone-modal" name="phone" type="tel" required minlength="18" maxlength="18" class="form-tell" placeholder="Ваш телефон*" />
+                <input name="email" type="email" class="form-email" maxlength="30" placeholder="Ваш e-mail (не обязательно)" />
+                <button type="submit" class="form-button">Рассчитать стоимость</button>
+
+			</form>
+		</div>
+		<div id="overlay"></div><!-- Пoдлoжкa -->
+</html>
