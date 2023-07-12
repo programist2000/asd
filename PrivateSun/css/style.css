@@ -117,6 +117,7 @@ button.form-button:hover {
     transition: 1s;
 }
 
+
 #modal-contact-form {
 	position: fixed; /* чтoбы oкнo былo в видимoй зoне в любoм месте */
 	display: none; /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
